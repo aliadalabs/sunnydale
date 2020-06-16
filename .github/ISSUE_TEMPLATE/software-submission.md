@@ -8,8 +8,8 @@ assignees: ''
 ---
 
 Submitting Author: Name (@github_handle)  
-Repository:   
-Version submitted: 
+Repository: <!--repository-->URL_OF_YOUR_PACKAGE<!--end-repository-->  
+Version submitted: <!--version-submitted-->VERSION<!--end-version-submitted--> 
 
 <!--EDITORIAL-DATA: LEAVE THIS SECTION AS IT IS, will be filled by the editors-->  
 Editor: <!--editor-->TBD<!--end-editor-->
