@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Submitting Author: <!--author-name-->Name<!--end-author-name--> (<!--author-handle-->@github_handle<!--end-author-handle-->)  
+Submitting Author: <!--author-name-->AUTHOR_NAME<!--end-author-name--> (<!--author-handle-->@AUTHOR_GITHUB_HANDLE<!--end-author-handle-->)  
 Repository: <!--target-repository-->URL_OF_YOUR_PACKAGE<!--end-target-repository-->  
 Version submitted: <!--version-submitted-->VERSION<!--end-version-submitted--> 
 
