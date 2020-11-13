@@ -8,16 +8,15 @@ assignees: ''
 ---
 
 Submitting Author: <!--author-name-->AUTHOR_NAME<!--end-author-name--> (<!--author-handle-->@AUTHOR_GITHUB_HANDLE<!--end-author-handle-->)  
-Repository: <!--target-repository-->URL_OF_YOUR_PACKAGE<!--end-target-repository-->  
+Repository: <!--target-repository-->URL_OF_THE_SOFTWARE_REPO<!--end-target-repository-->  
 Version submitted: <!--version-submitted-->VERSION<!--end-version-submitted--> 
 
-<!--EDITORIAL-DATA: LEAVE THIS SECTION AS IT IS, will be filled by the editors-->  
+  
 Editor: <!--editor-->TBD<!--end-editor-->
 Reviewer 1: <!--reviewer-1-->TBD<!--end-reviewer-1-->
 Reviewer 2: <!--reviewer-2-->TBD<!--end-reviewer-2-->  
 Archive: <!--archive-->TBD<!--end-archive-->  
 Version accepted: <!--version-->TBD<!--end-version-->  
-<!--END-OF-EDITORIAL-DATA-->  
 ---
 
 ## Description 
