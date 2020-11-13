@@ -12,8 +12,8 @@ Repository: <!--target-repository-->URL_OF_THE_SOFTWARE_REPO<!--end-target-repos
 Version submitted: <!--version-submitted-->VERSION<!--end-version-submitted--> 
 
   
-Editor: <!--editor-->TBD<!--end-editor-->
-Reviewer 1: <!--reviewer-1-->TBD<!--end-reviewer-1-->
+Editor: <!--editor-->TBD<!--end-editor-->  
+Reviewer 1: <!--reviewer-1-->TBD<!--end-reviewer-1-->  
 Reviewer 2: <!--reviewer-2-->TBD<!--end-reviewer-2-->  
 Archive: <!--archive-->TBD<!--end-archive-->  
 Version accepted: <!--version-->TBD<!--end-version-->  
