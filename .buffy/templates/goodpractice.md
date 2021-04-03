@@ -1,6 +1,0 @@
-:rocket:
-
-```json
-{{lint}}
-```
-:wave:
