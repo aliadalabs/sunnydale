@@ -1,0 +1,25 @@
+name: Compiling papers - Tests
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: 'Repository containing the paper file'
+        required: true
+      branch:
+        description: 'Git branch where the paper Markdown file is'
+        required: false
+      paper-path:
+        description: >-
+            Path to the main paper Markdown file, relative to the
+            project's root directory.
+        required: false
+        default: 'paper.md'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Cloning ${{ github.event.inputs.repo }}"
+          echo "- using branch ${{ github.event.inputs.branch }}"
+          echo "- file located: ${{ github.event.inputs.paper-path }}"
