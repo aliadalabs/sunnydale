@@ -16,7 +16,7 @@ on:
         default: 'paper.md'
 
 jobs:
-  say_hello:
+  cloning-repo:
     runs-on: ubuntu-latest
     steps:
       - run: |
