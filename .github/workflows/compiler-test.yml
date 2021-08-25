@@ -2,13 +2,13 @@ name: Compiling papers - Tests
 on:
   workflow_dispatch:
     inputs:
-      repo:
-        description: 'Repository containing the paper file'
+      repository_url:
+        description: 'URL of the repository containing the paper file'
         required: true
       branch:
         description: 'Git branch where the paper Markdown file is'
         required: false
-      paper-path:
+      paper_path:
         description: >-
             Path to the main paper Markdown file, relative to the
             project's root directory.
