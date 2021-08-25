@@ -20,6 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Cloning ${{ github.event.inputs.repo }}"
+          echo "Cloning ${{ github.event.inputs.repository_url }}"
           echo "- using branch ${{ github.event.inputs.branch }}"
-          echo "- file located: ${{ github.event.inputs.paper-path }}"
+          echo "- file located: ${{ github.event.inputs.paper_path }}"
