@@ -13,15 +13,13 @@ jobs:
   compiling:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Find Paper
+        id: find-paper
+        uses: xuanxu/compiler-action-testing@main
         with:
-          ruby-version: 3.0.2
-          bundler-cache: true
-      - name:
-        env:
-          REPO_URL: ${{ github.event.inputs.repository_url }}
-          PAPER_BRANCH: ${{ github.event.inputs.branch }}
+          repository_url: ${{ github.event.inputs.repository_url }}
+          branch: ${{ github.event.inputs.branch }}
+      - name: Test
         run: |
-          echo $REPO_URL
-          echo $PAPER_BRANCH
+          echo "Testing outputs"
+          echo $(ls -la ./target_repository/paper/)
