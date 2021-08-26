@@ -8,12 +8,6 @@ on:
       branch:
         description: 'Git branch where the paper Markdown file is'
         required: false
-      paper_path:
-        description: >-
-            Path to the main paper Markdown file, relative to the
-            project's root directory.
-        required: false
-        default: 'paper.md'
 
 jobs:
   cloning-repo:
