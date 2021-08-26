@@ -10,10 +10,18 @@ on:
         required: false
 
 jobs:
-  cloning-repo:
+  compiling:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Cloning ${{ github.event.inputs.repository_url }}"
-          echo "- using branch ${{ github.event.inputs.branch }}"
-          echo "- file located: ${{ github.event.inputs.paper_path }}"
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0.2
+          bundler-cache: true
+      - name:
+        env:
+          REPO_URL: ${{ github.event.inputs.repository_url }}
+          PAPER_BRANCH: ${{ github.event.inputs.branch }}
+        run: |
+          echo $REPO_URL
+          echo $PAPER_BRANCH
