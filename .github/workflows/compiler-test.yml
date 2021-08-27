@@ -19,6 +19,7 @@ jobs:
         with:
           repository_url: ${{ github.event.inputs.repository_url }}
           branch: ${{ github.event.inputs.branch }}
+          journal: joss
       - name: Test
         run: |
           echo "Testing outputs"
