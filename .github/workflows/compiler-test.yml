@@ -9,8 +9,8 @@ on:
         description: 'Git branch where the paper Markdown file is'
         required: false
       issue_id:
-        description: 'Git branch where the paper Markdown file is'
-        required: false
+        description: 'The issue number of the submission'
+        required: true
 
 jobs:
   compiling:
