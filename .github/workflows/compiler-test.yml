@@ -24,7 +24,7 @@ jobs:
           branch: ${{ github.event.inputs.branch }}
           journal: joss
       - name: Upload file to papers repo
-        uses: xuanxu/upload-paper-action@main
+        uses: xuanxu/upload-paper-action@test
         with:
           papers_repo: aliadalabs/papers-test
           branch_prefix: joss
