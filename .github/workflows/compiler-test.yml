@@ -25,8 +25,6 @@ jobs:
           journal: joss
       - name: Upload file to papers repo
         uses: xuanxu/upload-paper-action@main
-        env:
-          GH_TOKEN: ${{ github.token }}
         with:
           papers_repo: aliadalabs/papers-test
           branch_prefix: joss
