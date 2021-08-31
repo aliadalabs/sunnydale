@@ -26,7 +26,7 @@ jobs:
       - name: Upload file to papers repo
         uses: xuanxu/upload-paper-action@main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: whatever
         with:
           papers_repo: aliadalabs/papers-test
           branch_prefix: joss
