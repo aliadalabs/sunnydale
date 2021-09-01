@@ -25,6 +25,8 @@ jobs:
           journal: joss
       - name: Upload file to papers repo
         uses: xuanxu/upload-paper-action@test
+        env:
+          BOT_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
         with:
           papers_repo: aliadalabs/papers-test
           branch_prefix: joss
