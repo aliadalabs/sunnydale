@@ -39,5 +39,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
       - name: Error message
-        if: ${{ failure }}
+        if: ${{ failure() }}
         run: echo "FAIL"
