@@ -24,6 +24,7 @@ jobs:
           branch: ${{ github.event.inputs.branch }}
           journal: joss
       - name: Upload file to papers repo
+        id: upload-pdf
         uses: xuanxu/upload-paper-action@test
         with:
           papers_repo: aliadalabs/papers-test
@@ -31,3 +32,12 @@ jobs:
           issue_id: ${{ github.event.inputs.issue_id }}
           pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
           bot_token: ${{ secrets.PDF_BOT_TOKEN }}
+      - name: Reply message
+        if: ${{ success() }}
+        run: |
+          gh issue comment ${{ github.event.inputs.issue_id }} --body ":point_right::page_facing_up: [Download article proof](${{ steps.upload-pdf.outputs.download_url}}) :page_facing_up: [View article proof on GitHub](${{ steps.upload-pdf.outputs.html_url}}) :page_facing_up: :point_left:"
+        env:
+          GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
+      - name: Error message
+        if: ${{ failure }}
+        run: echo "FAIL"
