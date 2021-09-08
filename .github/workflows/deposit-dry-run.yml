@@ -33,7 +33,7 @@ jobs:
           pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
           bot_token: ${{ secrets.PDF_BOT_TOKEN }}
       - name: Add Crossref data
-        id: upload-pdf
+        id: upload-xml
         uses: xuanxu/upload-crossref-action@main
         with:
           papers_repo: aliadalabs/papers-test
