@@ -13,7 +13,7 @@ on:
         required: true
 
 jobs:
-  compiling:
+  preparing-acceptance:
     runs-on: ubuntu-latest
     steps:
       - name: Compile Paper
