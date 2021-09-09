@@ -32,15 +32,15 @@ jobs:
           issue_id: ${{ github.event.inputs.issue_id }}
           pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
           bot_token: ${{ secrets.PDF_BOT_TOKEN }}
-      - name: Add Crossref data
-        id: upload-xml
-        uses: xuanxu/upload-crossref-action@main
-        with:
-          papers_repo: aliadalabs/papers-test
-          branch_prefix: joss
-          issue_id: ${{ github.event.inputs.issue_id }}
-          pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
-          bot_token: ${{ secrets.PDF_BOT_TOKEN }}
+      # - name: Add Crossref data
+      #   id: upload-xml
+      #   uses: xuanxu/upload-crossref-action@main
+      #   with:
+      #     papers_repo: aliadalabs/papers-test
+      #     branch_prefix: joss
+      #     issue_id: ${{ github.event.inputs.issue_id }}
+      #     pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
+      #     bot_token: ${{ secrets.PDF_BOT_TOKEN }}
       - name: Open Pull Request
         uses: xuanxu/deposit-pull-request-action@main
         with:
