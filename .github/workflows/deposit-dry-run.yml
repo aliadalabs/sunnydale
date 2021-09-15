@@ -53,7 +53,11 @@ jobs:
       - name: Reply message
         if: ${{ success() }}
         run: |
-          gh issue comment ${{ github.event.inputs.issue_id }} --body ":wave: @xuanxu, this paper is ready to be accepted and published.\n\n Check final proof :point_right: ${{ steps.open-pr.outputs.pr_url}}\n\nIf the paper PDF and Crossref deposit XML look good in ${{ steps.open-pr.outputs.pr_url}}, then you can now move forward with accepting the submission by compiling again with the command `@botsci publish paper` "
+          gh issue comment ${{ github.event.inputs.issue_id }} --body ":wave: @xuanxu, this paper is ready to be accepted and published.
+
+          Check final proof :point_right: ${{ steps.open-pr.outputs.pr_url}}
+
+          If the paper PDF and Crossref deposit XML look good in ${{ steps.open-pr.outputs.pr_url}}, then you can now move forward with accepting the submission by compiling again with the command \`@botsci publish paper\`"
         env:
           GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
           GH_REPO: ${{ github.repository }}
