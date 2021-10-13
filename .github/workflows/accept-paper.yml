@@ -50,16 +50,20 @@ jobs:
           issue_id: ${{ github.event.inputs.issue_id }}
           bot_token: ${{ secrets.PDF_BOT_TOKEN }}
           mode: deposit
-      - name: Deposit
-        id: deposit
-        uses: xuanxu/deposit-action@main
+      - name: Deposit with Crossref
+        uses: xuanxu/deposit-with-crossref-action@main
+        with:
+          crossref_filepath: ${{ steps.upload-xml.outputs.xml_path}}
+          crossref_username: ${{ secrets.CROSSREF_USERNAME }}
+          crossref_password: ${{ secrets.CROSSREF_PASSWORD }}
+      - name: Deposit with JOSS
+        uses: xuanxu/deposit-with-openjournals-action@main
         with:
           journal_url: https://joss.theoj.org/
           journal_secret: ${{ secrets.JOSS_SECRET }}
           issue_id: ${{ github.event.inputs.issue_id }}
-          crossref_filepath: ${{ steps.upload-xml.outputs.xml_path}}
-          crossref_username: ${{ secrets.CROSSREF_USERNAME }}
-          crossref_password: ${{ secrets.CROSSREF_PASSWORD }}
+          paper_path: ${{ steps.generate-pdf.outputs.pdf_path}}
+          reviews_repo: aliadalabs/sunnydale
       - name: Error message
         if: ${{ failure() }}
         run: |
