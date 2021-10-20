@@ -59,11 +59,10 @@ jobs:
       - name: Deposit with JOSS
         uses: xuanxu/deposit-with-openjournals-action@main
         with:
-          journal_url: https://joss.theoj.org/
+          journal_alias: joss-test
           journal_secret: ${{ secrets.JOSS_SECRET }}
           issue_id: ${{ github.event.inputs.issue_id }}
-          paper_path: ${{ steps.generate-pdf.outputs.pdf_path}}
-          reviews_repo: aliadalabs/sunnydale
+          paper_path: ${{ steps.generate-pdf.outputs.paper_file_path}}
       - name: Error message
         if: ${{ failure() }}
         run: |
