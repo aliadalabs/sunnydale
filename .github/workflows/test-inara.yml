@@ -12,7 +12,7 @@ on:
         description: 'The issue number of the submission'
         required: true
 jobs:
-  creating-draft:
+  creating-artifacts:
     runs-on: ubuntu-latest
     steps:
       - name: Compile Paper
