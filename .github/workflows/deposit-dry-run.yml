@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Compile Paper
         id: generate-pdf
-        uses: xuanxu/compile-paper-action@main
+        uses: xuanxu/paper-action@main
         with:
           repository_url: ${{ github.event.inputs.repository_url }}
           branch: ${{ github.event.inputs.branch }}
@@ -34,12 +34,12 @@ jobs:
           bot_token: ${{ secrets.PDF_BOT_TOKEN }}
       # - name: Add Crossref data
       #   id: upload-xml
-      #   uses: xuanxu/upload-crossref-action@main
+      #   uses: xuanxu/upload-metadata-action@main
       #   with:
       #     papers_repo: aliadalabs/papers-test
       #     branch_prefix: joss
       #     issue_id: ${{ github.event.inputs.issue_id }}
-      #     pdf_path: ${{ steps.generate-pdf.outputs.pdf_path}}
+      #     jats_path: ${{ steps.generate-pdf.outputs.jats_path}}
       #     bot_token: ${{ secrets.PDF_BOT_TOKEN }}
       - name: Open Pull Request
         id: open-pr
