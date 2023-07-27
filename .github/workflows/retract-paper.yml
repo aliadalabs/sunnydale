@@ -1,0 +1,15 @@
+name: Retract paper
+on:
+  workflow_dispatch:
+    inputs:
+      issue_id:
+        description: 'The issue number of the retracted paper review'
+        required: true
+      retraction_notice_url:
+        description: 'URL for the markdown file of the retraction notice'
+        required: true
+      mode:
+        description: Set the compiled retraction notice as a draft or as a final published paper. Posible values are 'draft' or 'final'.
+        required: false
+        default: draft
+        
