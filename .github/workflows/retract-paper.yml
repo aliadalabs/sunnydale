@@ -12,4 +12,14 @@ on:
         description: Set the compiled retraction notice as a draft or as a final published paper. Posible values are 'draft' or 'final'.
         required: false
         default: draft
-        
+jobs:
+  retracttion-notice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate retraction notice
+        id: generate-retraction
+        uses: xuanxu/retraction-action@main
+        with:
+          repository_url: ${{ github.event.inputs.retraction_notice_url }}
+          issue_id: ${{ github.event.inputs.issue_id }}
+          journal: joss
