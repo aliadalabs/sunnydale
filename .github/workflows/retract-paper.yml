@@ -20,6 +20,6 @@ jobs:
         id: generate-retraction
         uses: xuanxu/retraction-action@main
         with:
-          repository_url: ${{ github.event.inputs.retraction_notice_url }}
+          retraction_notice_url: ${{ github.event.inputs.retraction_notice_url }}
           issue_id: ${{ github.event.inputs.issue_id }}
           journal: joss
