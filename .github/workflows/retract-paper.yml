@@ -23,3 +23,4 @@ jobs:
           retraction_notice_url: ${{ github.event.inputs.retraction_notice_url }}
           issue_id: ${{ github.event.inputs.issue_id }}
           journal: joss
+          mode: ${{ github.event.inputs.mode }}
