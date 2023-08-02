@@ -1,12 +1,15 @@
 ---
-title: 'Retraction test'
+title: 'Retraction Notice Test'
 authors:
- - name: The editors
+ - name:
+   literal: JOSS Editorial Board
    affiliation: 1
 affiliations:
- - name: Journal of Open Testing
+ - name: Journal of Open Source Software
    index: 1
 ---
+
+# Summary 
 
 Last year, TEST JOURNAL published this paper [tqdm: A Fast, Extensible Progress Meter for Python and CLI](https://joss.theoj.org/papers/10.21105/joss.01277).
 
@@ -16,6 +19,6 @@ Sometime later, the authorship (and JOSS handling) of this submission was [flagg
 
 Unfortunately, even after significant efforts from all parties, the tqdm community have been unable to resolve this issue and come to an agreed set of authors for their paper. 
 
-As a result, with regret, JOSS is today retracting this submission due to a violation of its ethical standards. 
+# Resolution
 
-Tester Editor (EiC TEST JOURNAL) on behalf of the TEST JOURNAL editorial team.
+As a result, with regret, JOSS is today retracting this submission due to a violation of its ethical standards. 
