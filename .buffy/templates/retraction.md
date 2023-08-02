@@ -1,3 +1,13 @@
+---
+title: 'Retraction test'
+authors:
+ - name: The editors
+   affiliation: 1
+affiliations:
+ - name: Journal of Open Testing
+   index: 1
+---
+
 Last year, TEST JOURNAL published this paper [tqdm: A Fast, Extensible Progress Meter for Python and CLI](https://joss.theoj.org/papers/10.21105/joss.01277).
 
 While potential authorship issues were noted by reviewers at the time and an attempt was made by the submitting author to contact one of the other major contributors to the package, JOSS published the paper as a single-author paper.
