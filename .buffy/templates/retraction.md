@@ -2,6 +2,8 @@
 title: 'Retraction Notice Test'
 authors:
  - name:
+     given-names: JOSS
+     surname: Editorial Board
      literal: JOSS Editorial Board
    affiliation: 1
 affiliations:
