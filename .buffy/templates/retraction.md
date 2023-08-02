@@ -1,5 +1,5 @@
 ---
-title: 'Retraction Notice Test'
+title: 'Retraction Notice for TQMD'
 authors:
  - name:
      given-names: JOSS
