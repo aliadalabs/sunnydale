@@ -2,10 +2,12 @@
 title: 'Retraction Notice for TQMD'
 authors:
  - name:
-     literal: EiC
+     given-names: JOSS
+     surname: Editorial Board
+     literal: JOSS Editorial Board
    affiliation: 1
 affiliations:
- - name: Journal of Open Source Software Test
+ - name: Journal of Open Source Software
    index: 1
 ---
 
