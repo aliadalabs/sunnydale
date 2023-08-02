@@ -2,7 +2,7 @@
 title: 'Retraction Notice Test'
 authors:
  - name:
-   literal: JOSS Editorial Board
+     literal: JOSS Editorial Board
    affiliation: 1
 affiliations:
  - name: Journal of Open Source Software
