@@ -23,4 +23,11 @@ jobs:
           retraction_notice_url: ${{ github.event.inputs.retraction_notice_url }}
           issue_id: ${{ github.event.inputs.issue_id }}
           journal: joss
+          papers_repo: aliadalabs/papers-test
+          papers_repo_main_branch: main
+          branch_prefix: test_journal
+          github_bot_token: ${{ secrets.BOT_TOKEN }}
+          crossref_username: ${{ secrets.CROSSREF_USERNAME }}
+          crossref_password: ${{ secrets.CROSSREF_PASSWORD }}
+          crossref_mode: test
           mode: ${{ github.event.inputs.mode }}
