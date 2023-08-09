@@ -26,7 +26,7 @@ jobs:
           papers_repo: aliadalabs/papers-test
           papers_repo_main_branch: main
           branch_prefix: test_journal
-          github_bot_token: ${{ secrets.BOT_TOKEN }}
+          github_bot_token: ${{ secrets.PDF_BOT_TOKEN }}
           crossref_username: ${{ secrets.CROSSREF_USERNAME }}
           crossref_password: ${{ secrets.CROSSREF_PASSWORD }}
           crossref_mode: test
