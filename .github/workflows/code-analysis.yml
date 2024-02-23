@@ -1,0 +1,33 @@
+name: Code analysis
+on:
+  workflow_dispatch:
+    inputs:
+      repository_url:
+        description: 'URL of the software repository to analyze'
+        required: true
+      branch:
+        description: 'Git branch to run the checks on'
+        required: false
+      issue_id:
+        description: 'The issue number of the submission to post the results'
+        required: true
+      repo_summary:
+        description: 'Perform an analysis of the source code and list authorship, contributions and file types information'
+        required: false
+        default: true
+      languages:
+        description:  'Detect the languages used in the repository and tagged the issue with the top three used languages'
+        required: false
+        default: true
+      wordcount:
+        description:  'Count the number of words in the paper file'
+        required: false
+        default: true
+      license:
+        description:  'Look for an Open Source License in the target repo and reply an error message if no license is found'
+        required: false
+        default: true
+      statement_of_need:
+        description:  'Look for an Statement Of Need section in the paper content'
+        required: false
+        default: true
