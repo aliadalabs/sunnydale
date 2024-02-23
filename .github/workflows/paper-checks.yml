@@ -1,0 +1,21 @@
+name: Code analysis
+on:
+  workflow_dispatch:
+    inputs:
+      repository_url:
+        description: 'URL of the repository where the paper file is'
+        required: true
+      branch:
+        description: 'Git branch with the paper file'
+        required: false
+      issue_id:
+        description: 'The issue number of the submission to post the results'
+        required: true
+      wordcount:
+        description:  'Count the number of words in the paper file'
+        required: false
+        default: true
+      statement_of_need:
+        description:  'Look for an Statement Of Need section in the paper content'
+        required: false
+        default: true
