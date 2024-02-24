@@ -1,0 +1,34 @@
+name: New submission (TEST)
+description: Submit a software repository for review
+title: "[REVIEW]: "
+labels: ["review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting your software!
+  - type: input
+    id: author-name
+    attributes:
+      label: Author name
+      description: Name of the package author
+      placeholder: ex. Anna Karenina
+    validations:
+      required: true
+  - type: input
+    id: author-handle
+    attributes:
+      label: Author handle
+      description: GitHub user of the package author
+      placeholder: ex. @your-github-username
+    validations:
+      required: true
+  - type: input
+    id: target-repository
+    attributes:
+      label: Repository
+      description: URL of the repository with the software
+      placeholder: https://github.com/organization/my-software
+    validations:
+      required: true
+  
