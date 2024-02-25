@@ -7,15 +7,15 @@ assignees: ''
 
 ---
 
-Submitting Author: <!--author-name-->AUTHOR_NAME<!--end-author-name--> (<!--author-handle-->@AUTHOR_GITHUB_HANDLE<!--end-author-handle-->)  
-Repository: <!--target-repository-->URL_OF_THE_SOFTWARE_REPO<!--end-target-repository-->  
-Version submitted: <!--version-submitted-->VERSION<!--end-version-submitted--> 
+**Submitting Author:** <!--author-name-->AUTHOR_NAME<!--end-author-name--> (<!--author-handle-->@AUTHOR_GITHUB_HANDLE<!--end-author-handle-->)  
+**Repository:** <!--target-repository-->URL_OF_THE_SOFTWARE_REPO<!--end-target-repository-->  
+**Version submitted:** <!--version-submitted-->VERSION<!--end-version-submitted--> 
 
   
-Editor: <!--editor-->TBD<!--end-editor-->  
-Reviewers: <!--reviewers-list--><!--end-reviewers-list-->
-Archive: <!--archive-->TBD<!--end-archive-->  
-Version accepted: <!--version-->TBD<!--end-version-->  
+**Editor:** <!--editor-->TBD<!--end-editor-->  
+**Reviewers:** <!--reviewers-list--><!--end-reviewers-list-->
+**Archive:** <!--archive-->TBD<!--end-archive-->  
+**Version accepted:** <!--version-->TBD<!--end-version-->  
 
 ---
 
