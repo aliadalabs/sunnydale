@@ -31,12 +31,11 @@ assignees: ''
 ## Scope 
 
 - Please indicate which category or categories this package falls under: (Please check an appropriate box below. If you are unsure, we suggest you make a pre-submission inquiry.):
-
-	- [ ] data retrieval
-	- [ ] scientific software wrappers
-	- [ ] field and lab reproducibility tools
-	- [ ] geospatial data
-	- [ ] text analysis
+    - [ ] data retrieval
+    - [ ] scientific software wrappers
+    - [ ] field and lab reproducibility tools
+    - [ ] geospatial data
+    - [ ] text analysis
 	
 - Explain how and why the package falls under these categories (briefly, 1-2 sentences):
 
