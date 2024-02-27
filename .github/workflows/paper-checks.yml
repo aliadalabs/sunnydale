@@ -30,7 +30,7 @@ jobs:
       - name: install CLOC
         run: sudo apt install cloc
       - name: run CLOC
-        run: cloc --quiet --report-file=cloc-results.txt ${{ github.action_path }} 
+        run: cloc --quiet --report-file=cloc-results.txt ${{ github.workspace }} 
       - name: Post results
         run: gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
         env:
