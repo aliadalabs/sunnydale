@@ -33,8 +33,7 @@ jobs:
         run: cloc --quiet --report-file=cloc-results.txt ${{ github.workspace }} 
       - name: Post results
         run: |
-          echo -e "\`\`\`\nSoftware report:\n\n$(cat cloc-results.txt)" > cloc-results.txt
-          echo "\n\`\`\`" >> cloc-results.txt
+          echo -e "\`\`\`\nSoftware report:\n\n$(cat cloc-results.txt)\n\`\`\`" > cloc-results.txt
           gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
         env:
           GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
