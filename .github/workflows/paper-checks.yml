@@ -27,10 +27,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.inputs.repository }}
-      - name: CLOC
-        run: |
-          sudo apt install cloc
-          cloc --quiet --report-file=cloc-results.txt ${{ github.action_path }} 
+      - name: install CLOC
+        run: sudo apt install cloc
+      - name: run CLOC
+        run: cloc --quiet --report-file=cloc-results.txt ${{ github.action_path }} 
       - name: Post results
         run: gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
         env:
