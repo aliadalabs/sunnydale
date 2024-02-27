@@ -29,7 +29,7 @@ jobs:
           repository: ${{ github.event.inputs.repository }}
       - name: CLOC
         run: |
-          apt install cloc
+          sudo apt install cloc
           cloc --quiet --report-file=cloc-results.txt ${{ github.action_path }} 
       - name: Post results
         run: gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
