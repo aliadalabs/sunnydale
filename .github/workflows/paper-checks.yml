@@ -1,4 +1,4 @@
-name: Code analysis
+name: Paper checks
 on:
   workflow_dispatch:
     inputs:
@@ -19,3 +19,19 @@ on:
         description:  'Look for an Statement Of Need section in the paper content'
         required: false
         default: true
+jobs:
+  read-paper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.inputs.repository }}
+      - name: CLOC
+        run: cloc --quiet ${{ github.action_path }} > cloc-results.txt
+      - name: Post results
+        run: gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+      
