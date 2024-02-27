@@ -30,6 +30,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ github.event.inputs.repository }}
+          path: "."
       - name: install CLOC
         run: sudo apt install cloc
       - name: run CLOC
