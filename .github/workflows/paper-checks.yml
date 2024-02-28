@@ -42,10 +42,8 @@ jobs:
         run: |
           git --version
           ls -la
-          git shortlog -sn --no-merges --branches HEAD .
+          git shortlog -sn --no-merges --branches .
           git branch
-          git log HEAD~10..HEAD --pretty=format:'%h - %s (%an)'
-          git status
           git log --pretty=short | git shortlog -sn
           (git shortlog -sn --no-merges) > git-authors.txt
           echo -e "\`\`\`\nThe following historical commit information, by author, was found:\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
