@@ -2,12 +2,13 @@ name: Paper checks
 on:
   workflow_dispatch:
     inputs:
-      repository:
-        description: 'repository where the paper file is: org/reponame'
+      repository_url:
+        description: 'URL of the repository where the paper file is: org/reponame'
         required: true
       branch:
         description: 'Git branch with the paper file'
         required: false
+        default: ""
       issue_id:
         description: 'The issue number of the submission to post the results'
         required: true
@@ -26,11 +27,9 @@ jobs:
   read-paper:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: https://gitlab.nublado.org/cloudy/cloudy
-          path: "."
+      - name: Clone repository
+        run: |
+          [[ ${{ github.event.inputs.branch }} == ""]] && echo($(git clone --single-branch ${{ github.event.inputs.repository_url }} . )) || git clone --single-branch --branch ${{ github.event.inputs.branch }} ${{ github.event.inputs.repository_url }} .
       - name: install CLOC
         run: sudo apt install cloc
       - name: run CLOC
@@ -43,6 +42,7 @@ jobs:
         run: |
           git --version
           ls -la
+          git status
           echo "$(git shortlog -sn --no-merges)" > git-authors.txt
           echo -e "\`\`\`\nThe following historical commit information, by author, was found:\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
           gh issue comment ${{ github.event.inputs.issue_id }} --body-file git-authors.txt      
