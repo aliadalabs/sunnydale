@@ -43,6 +43,7 @@ jobs:
         run: |
           git --version
           ls -la
+          git checkout
           git shortlog -sn 
           git shortlog -sn > git-authors.txt
           echo -e "\`\`\`\nThe following historical commit information, by author, was found:\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
