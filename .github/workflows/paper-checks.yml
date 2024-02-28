@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Clone repository
         run: |
-          [[ ${{ github.event.inputs.branch }} == ""]] && echo($(git clone --single-branch ${{ github.event.inputs.repository_url }} . )) || git clone --single-branch --branch ${{ github.event.inputs.branch }} ${{ github.event.inputs.repository_url }} .
+          [[ "${{ github.event.inputs.branch }}" == ""]] && (git clone --single-branch ${{ github.event.inputs.repository_url }} . ) || (git clone --single-branch --branch ${{ github.event.inputs.branch }} ${{ github.event.inputs.repository_url }} .)
       - name: install CLOC
         run: sudo apt install cloc
       - name: run CLOC
