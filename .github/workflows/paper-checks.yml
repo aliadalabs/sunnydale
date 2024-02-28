@@ -37,15 +37,16 @@ jobs:
       - name: Post results
         run: |
           echo -e "\`\`\`\nSoftware report:\n\n$(cat cloc-results.txt)\n\`\`\`" > cloc-results.txt
-          gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
+#          gh issue comment ${{ github.event.inputs.issue_id }} --body-file cloc-results.txt
       - name: List Git Authors
         run: |
           git --version
           ls -la
-          git shortlog -sn --no-merges .
+          git shortlog -sn --no-merges --branches HEAD .
           git branch
           git log HEAD~10..HEAD --pretty=format:'%h - %s (%an)'
           git status
+          git log --pretty=short | git shortlog -sn
           (git shortlog -sn --no-merges) > git-authors.txt
           echo -e "\`\`\`\nThe following historical commit information, by author, was found:\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
           cat git-authors.txt
