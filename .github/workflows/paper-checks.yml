@@ -42,6 +42,7 @@ jobs:
       - name: List Git Authors
         run: |
           ls -la
-          git shortlog -sn > git-authors.txt
-          echo -e "\`\`\`\nThe following historical commit information, by author, was found::\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
+          git shortlog -sn .
+          git shortlog -sn . > git-authors.txt
+          echo -e "\`\`\`\nThe following historical commit information, by author, was found:\n\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
           gh issue comment ${{ github.event.inputs.issue_id }} --body-file git-authors.txt      
