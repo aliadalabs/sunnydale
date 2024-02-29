@@ -1,4 +1,4 @@
-name: Paper checks
+name: Repository and paper info
 on:
   workflow_dispatch:
     inputs:
@@ -12,14 +12,6 @@ on:
       issue_id:
         description: 'The issue number of the submission to post the results'
         required: true
-      wordcount:
-        description:  'Count the number of words in the paper file'
-        required: false
-        default: true
-      statement_of_need:
-        description:  'Look for an Statement Of Need section in the paper content'
-        required: false
-        default: true
 env:
   GITHUB_TOKEN: ${{ secrets.PDF_BOT_TOKEN }}
   GH_REPO: ${{ github.repository }}
@@ -27,20 +19,9 @@ jobs:
   run-analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
-        run: |
-          [[ "${{ github.event.inputs.branch }}" == "" ]] && (git clone --single-branch ${{ github.event.inputs.repository_url }} . ) || (git clone --single-branch --branch ${{ github.event.inputs.branch }} ${{ github.event.inputs.repository_url }} .)
-      - name: install CLOC
-        run: sudo apt install cloc
-      - name: run CLOC
-        run: | 
-          cloc --quiet --report-file=cloc-results.txt ${{ github.workspace }} 
-          echo -e "**Software report:**\n\n\`\`\`\n$(cat cloc-results.txt)\n\`\`\`" > cloc-results.txt
-      - name: List Git Authors
-        run: |
-          (git shortlog -sn --no-merges --branches .) > git-authors.txt
-          echo -e "**Commit count by author**:\n\n\`\`\`\n$(cat git-authors.txt)\n\`\`\`" > git-authors.txt
-      - name: Post results
-        run: |
-          echo -e "$(cat cloc-results.txt)\n\n$(cat git-authors.txt)\n" > code-stats.txt
-          gh issue comment ${{ github.event.inputs.issue_id }} --body-file code-stats.txt
+      - name: Repository and paper analysis
+        uses: openjournals/gh-action-repo-checks@main
+        with:
+          repository_url: ${{ github.event.inputs.repository_url }}
+          branch: ${{ github.event.inputs.branch }}
+          issue_id: ${{ github.event.inputs.issue_id }}
