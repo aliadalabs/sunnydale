@@ -1,4 +1,4 @@
-name: Draft paper
+name: JCON draft paper
 on:
   workflow_dispatch:
     inputs:
