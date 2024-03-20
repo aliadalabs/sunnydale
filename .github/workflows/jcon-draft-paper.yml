@@ -34,7 +34,8 @@ jobs:
           papers_repo: ${{ github.repository }}
           branch_prefix: jcon
           issue_id: ${{ github.event.inputs.issue_id }}
-          pdf_path: ${{ steps.generate-files.outputs.pdf_path}}
+          pdf_path: ${{ steps.generate-files.outputs.pdf_path }}
+          crossref_path: ${{ steps.generate-files.outputs.crossref_path }}
       - name: Reply message
         if: ${{ success() }}
         run: |
